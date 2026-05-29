@@ -1,0 +1,23 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Profile",
+  "type": "object",
+  "required": ["subject_id", "claims"],
+  "properties": {
+    "subject_id": { "type": "string" },
+    "claims": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["observation", "inference", "confidence", "evidence"],
+        "properties": {
+          "observation": { "type": "string" },
+          "inference": { "type": "string" },
+          "confidence": { "enum": ["low", "moderate", "high"] },
+          "evidence": { "type": "array", "items": { "type": "string" } },
+          "speculation": { "type": "boolean", "default": false }
+        }
+      }
+    }
+  }
+}
