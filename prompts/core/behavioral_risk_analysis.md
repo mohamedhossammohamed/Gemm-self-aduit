@@ -63,7 +63,7 @@ Organize as:
 
 ## Critical Tagging Requirements
 
-- Mark all inferences with explicit confidence tags: [HIGH CONFIDENCE], [MODERATE CONFIDENCE], [LOW CONFIDENCE], [SPECULATIVE]
+- Mark all inferences with explicit confidence tags: low, moderate, or high; label speculation separately as speculative
 - Distinguish between "pattern observed in memory" vs. "pattern likely to intensify"
 - Never assume mental health diagnosis from behavioral patterns
 - Acknowledge where insufficient data exists to make risk judgments
