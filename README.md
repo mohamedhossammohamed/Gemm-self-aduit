@@ -83,6 +83,8 @@ For deeper exploration of specific aspects, use these after the master prompt:
 3. **Exploring uncertainties?** → Use **Research** category for hypothesis generation
 4. **Want visualizations?** → Use **Visualization** master for interactive outputs
 
+For detailed workflows, decision trees, and prompt selection FAQ, see [`/docs/prompt_selection_guide.md`](/docs/prompt_selection_guide.md).
+
 ## Ethics and Epistemic Boundaries
 
 See:

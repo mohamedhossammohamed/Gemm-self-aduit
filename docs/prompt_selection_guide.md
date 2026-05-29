@@ -202,6 +202,6 @@ When adding new prompts, consider:
 1. Is this a **master prompt** (comprehensive, broad) or **specialized prompt** (focused, narrow)?
 2. Which **category** does it belong to? (core, visualization, experimental)
 3. How does it **complement** existing prompts?
-4. Update this guide with the new prompt hierarchy
+4. Update this guide and `README.md` with the new prompt hierarchy and prompt list
 
 See `/docs/methodology.md` for prompt development guidelines.
