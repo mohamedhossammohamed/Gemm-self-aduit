@@ -1,0 +1,66 @@
+name: Prompt Proposal
+description: Propose a new analysis prompt that follows the project's epistemic constraints
+title: "[PROMPT] "
+labels: ["prompt-proposal"]
+assignees: []
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for proposing a new prompt! Please ensure it strictly adheres to our **Memory-Constrained** methodology.
+  - type: input
+    id: prompt_name
+    attributes:
+      label: Proposed Prompt Name
+      description: What should the file be named? (e.g., `emotional_volatility_analysis.md`)
+    validations:
+      required: true
+  - type: dropdown
+    id: category
+    attributes:
+      label: Category
+      description: Which directory does this belong in?
+      options:
+        - Core (`/prompts/core/`)
+        - Visualization (`/prompts/visualization/`)
+        - Experimental (`/prompts/experimental/`)
+    validations:
+      required: true
+  - type: textarea
+    id: purpose
+    attributes:
+      label: Purpose of the Prompt
+      description: What specific psychological, behavioral, or analytical insight does this prompt extract?
+    validations:
+      required: true
+  - type: textarea
+    id: structure
+    attributes:
+      label: Proposed Structure / Draft
+      description: Provide a draft or the core instructions of the prompt.
+      render: markdown
+    validations:
+      required: true
+  - type: checkboxes
+    id: constraints_check
+    attributes:
+      label: Constraint Checklist
+      description: Does your proposed prompt enforce the following?
+      options:
+        - label: Explicitly bans external knowledge / retrieval
+          required: true
+        - label: Requires the model to use ONLY the provided memory/chat logs
+          required: true
+        - label: Forces separation of Observation vs. Speculation
+          required: true
+        - label: Requires explicit Confidence Levels (Low/Mod/High) for inferences
+          required: true
+  - type: textarea
+    id: example_output
+    attributes:
+      label: Expected Output Example
+      description: Provide a mock example of what a compliant AI response to this prompt would look like.
+      render: markdown
+    validations:
+      required: false

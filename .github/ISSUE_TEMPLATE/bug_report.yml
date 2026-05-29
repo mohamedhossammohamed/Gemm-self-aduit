@@ -1,0 +1,76 @@
+name: Bug Report
+description: Report a bug in the webapp, broken prompts, or methodology violations
+title: "[BUG] "
+labels: ["bug"]
+assignees: []
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for reporting an issue! Please provide as much detail as possible to help us reproduce and fix it.
+  - type: input
+    id: version
+    attributes:
+      label: Version / Commit Hash
+      description: What version of the code or commit hash are you using?
+    validations:
+      required: false
+  - type: dropdown
+    id: component
+    attributes:
+      label: Affected Component
+      description: Which part of the system is affected?
+      options:
+        - Prompts (Core)
+        - Prompts (Visualization)
+        - Prompts (Experimental)
+        - Webapp
+        - Documentation / Wiki
+        - Other
+    validations:
+      required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: Description of the Bug
+      description: A clear and concise description of what the bug is.
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to Reproduce
+      description: Steps to reproduce the behavior.
+      placeholder: |
+        1. Use prompt '...'
+        2. Provide input '...'
+        3. See error/unexpected output
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected Behavior
+      description: A clear and concise description of what you expected to happen.
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Output / Logs
+      description: If applicable, add the raw AI output or error logs.
+      render: text
+    validations:
+      required: false
+  - type: checkboxes
+    id: constraints
+    attributes:
+      label: Scientific Constraints Verification
+      description: If reporting a prompt issue, does the current output violate any core constraints?
+      options:
+        - label: The model used external internet data/knowledge
+        - label: The model assumed demographics/external profiling
+        - label: The model failed to separate evidence from speculation
+        - label: The model failed to state its confidence level
+        - label: Not applicable (e.g., Webapp bug)
