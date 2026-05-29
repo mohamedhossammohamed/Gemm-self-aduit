@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Behavioral Vectors",
+  "type": "object",
+  "additionalProperties": {
+    "type": "object",
+    "required": ["value", "confidence"],
+    "properties": {
+      "value": { "type": "number", "minimum": 0, "maximum": 1 },
+      "confidence": { "enum": ["low", "moderate", "high"] },
+      "notes": { "type": "string" }
+    }
+  }
+}

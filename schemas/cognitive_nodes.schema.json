@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Cognitive Nodes",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "required": ["id", "label", "confidence"],
+    "properties": {
+      "id": { "type": "string" },
+      "label": { "type": "string" },
+      "confidence": { "enum": ["low", "moderate", "high"] },
+      "evidence_refs": { "type": "array", "items": { "type": "string" } }
+    }
+  }
+}
